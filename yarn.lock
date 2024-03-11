@@ -431,6 +431,16 @@
     "@tanstack/query-core" "4.24.4"
     use-sync-external-store "^1.2.0"
 
+"@tma.js/sdk-react@^1.2.21":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@tma.js/sdk-react/-/sdk-react-1.2.1.tgz#ea021de99aa7ad7cc66c982bf6124759434007b7"
+  integrity sha512-YExqNjueM9PtEMFro0h8nZmYiaH6sjGm/FhPk8bBI/E1QTV+CSIaSIBwlyL1yoDNYM3+X8NN+BxVRE106IERJQ==
+
+"@tma.js/sdk@^1.4.8":
+  version "1.4.8"
+  resolved "https://registry.yarnpkg.com/@tma.js/sdk/-/sdk-1.4.8.tgz#4c3b7c8160830c5a0b72855549fd96a9ecdd42a6"
+  integrity sha512-qHBoesEJRMQyA+1d7mGiHAbimQcsdl8MvKuNo/LvLVYTtvGPsCBwLDkpCD8/MVlR2ppS4Y0Wi0vjVD6jrQ+m/Q==
+
 "@tonconnect/isomorphic-eventsource@^0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@tonconnect/isomorphic-eventsource/-/isomorphic-eventsource-0.0.1.tgz#199e5a86c31dad706b79826f65879e0d77d3dd51"

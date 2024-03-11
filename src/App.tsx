@@ -8,6 +8,7 @@ import { Button, FlexBoxCol, FlexBoxRow } from "./components/styled/styled";
 import { useTonConnect } from "./hooks/useTonConnect";
 import { CHAIN } from "@tonconnect/protocol";
 import "@twa-dev/sdk";
+import {useMiniApp} from "@tma.js/sdk-react";
 
 const StyledApp = styled.div`
   background-color: #e8e8e8;
@@ -28,6 +29,8 @@ const AppContainer = styled.div`
 
 function App() {
   const { network } = useTonConnect();
+
+  const miniApp = useMiniApp();
 
   return (
     <StyledApp>
