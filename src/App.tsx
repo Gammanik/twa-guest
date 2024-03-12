@@ -7,7 +7,11 @@ import styled from "styled-components";
 import { Button, FlexBoxCol, FlexBoxRow } from "./components/styled/styled";
 import { useTonConnect } from "./hooks/useTonConnect";
 import { CHAIN } from "@tonconnect/protocol";
-import "@twa-dev/sdk";
+import { retrieveLaunchParams } from "@tma.js/sdk";
+import {SDKProvider, type SDKInitOptions, DisplayGate} from '@tma.js/sdk-react';
+import {SDKProviderError} from "./components/sdk/SDKProviderError";
+import {SDKProviderLoading} from "./components/sdk/SDKProviderLoading";
+import {SDKInitialState} from "./components/sdk/SDKInitialState";
 
 const StyledApp = styled.div`
   background-color: #e8e8e8;
@@ -28,26 +32,29 @@ const AppContainer = styled.div`
 
 function App() {
   const { network } = useTonConnect();
+  // const startParam = retrieveLaunchParams().startParam;
+  const options: SDKInitOptions = {
+    acceptCustomStyles: true,
+    cssVars: true,
+  };
 
   return (
     <StyledApp>
+      <SDKProvider options={options}>
+      {/*<DisplayGate error={SDKProviderError} loading={SDKProviderLoading} initial={SDKInitialState}>*/}
       <AppContainer>
-        <FlexBoxCol>
-          <FlexBoxRow>
-            <TonConnectButton />
-            <Button>
-              {network
-                ? network === CHAIN.MAINNET
-                  ? "mainnet"
-                  : "testnet"
-                : "N/A"}
-            </Button>
-          </FlexBoxRow>
-          <Counter />
-          <TransferTon />
-          <Jetton />
-        </FlexBoxCol>
+          <FlexBoxCol>
+            <FlexBoxRow>
+                <TonConnectButton />
+                <Button> {network ? network === CHAIN.MAINNET ? "mainnet" : "testnet" : "N/A"} </Button>
+            </FlexBoxRow>
+            <Counter />
+            <TransferTon />
+            <Jetton />
+          </FlexBoxCol>
       </AppContainer>
+      {/*</DisplayGate>*/}
+      </SDKProvider>
     </StyledApp>
   );
 }
