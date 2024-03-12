@@ -8,7 +8,7 @@ import { Button, FlexBoxCol, FlexBoxRow } from "./components/styled/styled";
 import { useTonConnect } from "./hooks/useTonConnect";
 import { CHAIN } from "@tonconnect/protocol";
 import { retrieveLaunchParams } from "@tma.js/sdk";
-import {SDKProvider, type SDKInitOptions, DisplayGate} from '@tma.js/sdk-react';
+import {SDKProvider, type SDKInitOptions, DisplayGate, useInitData} from '@tma.js/sdk-react';
 import {SDKProviderError} from "./components/sdk/SDKProviderError";
 import {SDKProviderLoading} from "./components/sdk/SDKProviderLoading";
 import {SDKInitialState} from "./components/sdk/SDKInitialState";
@@ -37,11 +37,17 @@ function App() {
     acceptCustomStyles: true,
     cssVars: true,
   };
+  const initData = useInitData();
+
 
   return (
     <StyledApp>
       <SDKProvider options={options}>
-      {/*<DisplayGate error={SDKProviderError} loading={SDKProviderLoading} initial={SDKInitialState}>*/}
+      <DisplayGate error={SDKProviderError} loading={SDKProviderLoading} initial={SDKInitialState}>
+        <p>А вот тебе сразу данные твоего пользователя, без деплоя на сервер:</p>
+        <pre>{JSON.stringify(initData?.user, null, 2)}</pre>
+
+
       <AppContainer>
           <FlexBoxCol>
             <FlexBoxRow>
@@ -53,7 +59,7 @@ function App() {
             <Jetton />
           </FlexBoxCol>
       </AppContainer>
-      {/*</DisplayGate>*/}
+      </DisplayGate>
       </SDKProvider>
     </StyledApp>
   );
