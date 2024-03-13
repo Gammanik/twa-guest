@@ -431,7 +431,7 @@
     "@tanstack/query-core" "4.24.4"
     use-sync-external-store "^1.2.0"
 
-"@tma.js/sdk-react@^1.2.21":
+"@tma.js/sdk-react@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@tma.js/sdk-react/-/sdk-react-1.2.1.tgz#ea021de99aa7ad7cc66c982bf6124759434007b7"
   integrity sha512-YExqNjueM9PtEMFro0h8nZmYiaH6sjGm/FhPk8bBI/E1QTV+CSIaSIBwlyL1yoDNYM3+X8NN+BxVRE106IERJQ==
@@ -488,18 +488,6 @@
     classnames "^2.3.2"
     deepmerge "^4.2.2"
     ua-parser-js "^1.0.35"
-
-"@twa-dev/sdk@^6.4.2":
-  version "6.4.2"
-  resolved "https://registry.npmjs.org/@twa-dev/sdk/-/sdk-6.4.2.tgz"
-  integrity sha512-f/lA6gu1HenBIZWXVlvmeBvZ7KnEMR4MOzSiTRJz/YvxQsGUG1a5CpZ4Hyr/8qA920bOlhZdvXxCihlw0fsTWQ==
-  dependencies:
-    "@twa-dev/types" "^6.4.2"
-
-"@twa-dev/types@^6.4.2":
-  version "6.4.2"
-  resolved "https://registry.npmjs.org/@twa-dev/types/-/types-6.4.2.tgz"
-  integrity sha512-LwPdC5+CyYVqowiw3oxuHvL3F/oid72nFMqB+N+GyjwMhxKmwKtlMSBVKG5G1S3CNSwRUDZBFXOnukBvcC84/Q==
 
 "@types/estree@^1.0.0":
   version "1.0.0"
