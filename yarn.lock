@@ -502,27 +502,36 @@
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
 
-"@types/node@^18.11.18":
-  version "18.11.18"
-  resolved "https://registry.npmjs.org/@types/node/-/node-18.11.18.tgz"
-  integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
+"@types/node@17.0.14":
+  version "17.0.14"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.14.tgz#33b9b94f789a8fedd30a68efdbca4dbb06b61f20"
+  integrity sha512-SbjLmERksKOGzWzPNuW7fJM7fk3YXVTFiZWB/Hs99gwhk+/dnrQRPBQjPW9aO+fi1tAffi9PrwFvsmOKmDTyng==
 
 "@types/prop-types@*":
   version "15.7.5"
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
-"@types/react-dom@^18.0.10":
-  version "18.0.10"
-  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.0.10.tgz"
-  integrity sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==
+"@types/react-dom@17.0.14":
+  version "17.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.14.tgz#c8f917156b652ddf807711f5becbd2ab018dea9f"
+  integrity sha512-H03xwEP1oXmSfl3iobtmQ/2dHF5aBHr8aUMwyGZya6OW45G+xtdzmq6HkncefiBt5JU8DVyaWl/nWZbjZCnzAQ==
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^18.0.27":
+"@types/react@*":
   version "18.0.27"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.0.27.tgz"
   integrity sha512-3vtRKHgVxu3Jp9t718R9BuzoD4NcQ8YJ5XRzsSKxNDiDonD2MXIT1TmSkenxuCycZJoQT5d2vE8LwWJxBC1gmA==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@17.0.14":
+  version "17.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.14.tgz#f0629761ca02945c4e8fea99b8177f4c5c61fb0f"
+  integrity sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
