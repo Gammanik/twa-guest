@@ -36,6 +36,8 @@ function App() {
   const options: SDKInitOptions = {
     acceptCustomStyles: true,
     cssVars: true,
+    complete: false,
+    async: false,
   };
   const initData = useInitData();
 
