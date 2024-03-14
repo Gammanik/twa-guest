@@ -39,15 +39,14 @@ function App() {
     complete: false,
     async: false,
   };
-  // const initData = useInitData();
-
+  const initData = useInitData();
 
   return (
     <StyledApp>
       <SDKProvider options={options}>
       <DisplayGate error={SDKProviderError} loading={SDKProviderLoading} initial={SDKInitialState}>
         <p>А вот тебе сразу данные твоего пользователя:</p>
-        {/*<pre>{JSON.stringify(initData?.user, null, 2)}</pre>*/}
+        <pre>{JSON.stringify(initData?.user, null, 2)}</pre>
 
       <AppContainer>
           <FlexBoxCol>
