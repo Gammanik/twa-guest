@@ -39,29 +39,27 @@ function App() {
     complete: false,
     async: false,
   };
-  const initData = useInitData();
 
   return (
     <StyledApp>
       <SDKProvider options={options}>
-      <DisplayGate error={SDKProviderError} loading={SDKProviderLoading} initial={SDKInitialState}>
-        <p>А вот тебе сразу данные твоего пользователя:</p>
-        <pre>{JSON.stringify(initData?.user, null, 2)}</pre>
+        <DisplayGate error={SDKProviderError} loading={SDKProviderLoading} initial={SDKInitialState}>
 
-      <AppContainer>
+        <AppContainer>
           <FlexBoxCol>
             <FlexBoxRow>
-                <TonConnectButton />
-                <Button> {network ? network === CHAIN.MAINNET ? "mainnet" : "testnet" : "N/A"} </Button>
+              <TonConnectButton />
+              <Button> {network ? network === CHAIN.MAINNET ? "mainnet" : "testnet" : "N/A"} </Button>
             </FlexBoxRow>
             <Counter />
             <TransferTon />
             <Jetton />
           </FlexBoxCol>
-      </AppContainer>
+        </AppContainer>
 
-      </DisplayGate>
+        </DisplayGate>
       </SDKProvider>
+
     </StyledApp>
   );
 }
